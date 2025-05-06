@@ -1,7 +1,7 @@
-import Header from "../components/Header";
+import Index from "../components/Header";
 
 export default function Home() {
-    return (<>
-        <Header/>
-    </>)
+  return (<>
+    <Index/>
+  </>)
 }
