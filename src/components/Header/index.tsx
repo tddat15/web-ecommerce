@@ -10,10 +10,10 @@ export default function Header() {
         </div>
 
         <nav className="navigation">
-          <a href="#">Home</a>
-          <a href="#">Contact</a>
-          <a href="#">About</a>
-          <a href="#">Sign Up</a>
+          <a href="/home">Home</a>
+          <a href="/contacts">Contact</a>
+          <a href="/about">About</a>
+          <a href="/sign-up">Sign Up</a>
         </nav>
 
         <div className="search-wrapper">

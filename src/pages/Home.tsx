@@ -1,7 +1,9 @@
-import Index from "../components/Header";
+import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
 
 export default function Home() {
   return (<>
-    <Index/>
+    <Header/>
+    <HeroSection />
   </>)
 }
