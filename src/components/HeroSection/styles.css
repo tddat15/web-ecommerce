@@ -1,9 +1,7 @@
 
-
 .hero-section {
     display: flex;
     font-size: 16px;
-    justify-content: center;
     margin: 0 auto;
     max-width: 1170px;
 }
@@ -12,7 +10,8 @@
     padding-top: 40px;
     padding-right: 16px;
     border-right: 1px solid #000000;
-    width: 250px;
+    max-width: 217px;
+    max-height: 344px;
 }
 
 .hero-section .sidebar > ul {
@@ -31,16 +30,13 @@
 }
 
 .hero-section .banner {
-    padding-top: 40px;
-    padding-left: 45px;
-    height: 344px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .hero-section .banner > img {
-    max-height: 100%;
+    padding: 40px 0 0 45px;
     max-width: 100%;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
+    height: auto;
+    display: block;
+
 }
