@@ -26,14 +26,14 @@ const ProductThumbnail: React.FC<ProductThumbnailProps> =
       <div className="product-thumbnail">
         <div className="image-wrapper">
           <div className="thumbnail-header">
-            <div className="top-left-badge">-40%</div>
+            <div className="top-left-badge">-{discount}%</div>
 
             <div className="top-right-icons">
               <button className="icon-button">❤️</button>
               <button className="icon-button">👁</button>
             </div>
           </div>
-
+ 
           <div className="product-image">
             <img src={imageUrl} alt={name}/>
           </div>

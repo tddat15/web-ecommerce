@@ -12,9 +12,11 @@ export default function FlashSales() {
             label='Todays'
             title='Flash Sales'
           />
+        </div>
 
-          {flashSaleData.map((sale) => (
-            <>
+        <div className="slider-products">
+          <div className="list-products">
+            {flashSaleData.map((sale) => (
               <ProductThumbnail
                 imageUrl={sale.image}
                 name={sale.title}
@@ -25,10 +27,10 @@ export default function FlashSales() {
                 reviewCount={sale.reviews}
                 showAddToCart={false}
               />
-            </>
-          ))}
-
+            ))}
+          </div>
         </div>
+
 
         <div className="products">
 
