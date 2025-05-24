@@ -1,22 +1,6 @@
-.flash-sales {
-    display: flex;
-    font-size: 16px;
-    margin: 140px auto;
-    max-width: 1170px;
-    flex-direction: column;
-}
-
-.slider-products::-webkit-scrollbar {
-    display: none;
-}
-
-.slider-products {
-    max-width: 1170px;
-    width: 100%;
-    overflow-x: auto;
-}
-
-.list-products {
-    display: flex;
+.explore-list-products {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     gap: 30px;
 }

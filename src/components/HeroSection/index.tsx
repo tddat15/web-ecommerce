@@ -2,7 +2,7 @@ import './styles.css';
 
 export default function HeroSection() {
     return (
-        <section className="hero-section">
+        <section className="container hero-section">
             <aside className="sidebar">
                 <ul>
                     <li>Woman's Fashion</li>

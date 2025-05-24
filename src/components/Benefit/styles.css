@@ -1,21 +1,46 @@
-.footer {
-    max-height: 440px;
-    background-color: black;
-    color: white;
-    height: 100%;
-}
-
-.footer-container {
+.benefit {
     display: flex;
-    max-width: 1170px;
-    width: 100%;
-    padding: 80px 135px 124px 135px;
-    gap: 87px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 88px;
 }
 
-.footer-column {
+.benefit-item {
     display: flex;
     flex-direction: column;
-    width: 217px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.benefit-item .icon  {
+    width: 58px;
+    height: 58px;
+    background-color: black;
+    border-radius: 50%;
+    border: 11px solid rgba(154, 149, 156, 0.68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+h3 {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+
+}
+
+p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
 }

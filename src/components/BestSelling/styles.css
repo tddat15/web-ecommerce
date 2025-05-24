@@ -1,8 +1,6 @@
 .flash-sales {
     display: flex;
     font-size: 16px;
-    margin: 140px auto;
-    max-width: 1170px;
     flex-direction: column;
 }
 

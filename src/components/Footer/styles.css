@@ -1,21 +1,80 @@
 .footer {
     max-height: 440px;
-    background-color: black;
     color: white;
-    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 124px;
 }
 
-.footer-container {
-    display: flex;
-    max-width: 1170px;
-    width: 100%;
-    padding: 80px 135px 124px 135px;
-    gap: 87px;
-    justify-content: space-between;
+footer {
+    width: 100vw;
+    background-color: black;
+    height: 440px;
 }
 
 .footer-column {
     display: flex;
     flex-direction: column;
     width: 217px;
+    gap: 24px;
+}
+
+.footer-column form {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    box-sizing: border-box;
+    border: 1.5px solid #FAFAFA;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.footer-column input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #FAFAFA;
+    font-size: 14px;
+    padding: 12px 32px 12px 16px;
+    width: 130px;
+}
+
+.footer-column button {
+    border: none;
+    cursor: pointer;
+    padding: 0 10px 0 0 ;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.footer-column button img {
+}
+
+.footer-column .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin: 0;
+    font-family: Poppins, serif;
+}
+
+.footer-column h4 {
+    font-size: 20px;
+    margin: 0;
+    font-family: Poppins, serif;
+}
+
+.footer-column p {
+    font-size: 16px;
+    margin: 0;
+    font-family: Poppins, serif;
 }

@@ -1,12 +1,12 @@
 import './styles.css'
 import SectionHeader from "../SectionHeader";
-import {flashSaleData} from "../../mocks";
 import ProductThumbnail from "../ProductThumbnail";
+import {bestSellingMock} from "../../mocks/bestSelling.mock";
 
 export default function BestSelling() {
   return (
     <>
-      <section className="flash-sales">
+      <section className="container">
         <div className="header">
           <SectionHeader
             label='This Month'
@@ -16,7 +16,7 @@ export default function BestSelling() {
 
         <div className="slider-products">
           <div className="list-products">
-            {flashSaleData.map((sale) => (
+            {bestSellingMock.map((sale) => (
               <ProductThumbnail
                 imageUrl={sale.image}
                 name={sale.title}

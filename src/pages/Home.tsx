@@ -6,19 +6,26 @@ import BestSelling from "../components/BestSelling";
 import BrowserCategory from "../components/BrowserCategory";
 import ExploreProducts from "../components/ExploreProducts";
 import NewArrival from "../components/NewArrival";
+import Benefit from "../components/Benefit";
+import Banner from "../components/Banner";
 
 export default function Home() {
-  return (
-    <>
-      <Header/>
-      <HeroSection/>
-      <FlashSales/>
-      <BestSelling/>
-      <BrowserCategory/>
-      <h2>Banner</h2>
-      <ExploreProducts/>
-      <NewArrival/>
-      <Footer/>
-    </>
-  )
+    return (
+        <>
+            <Header/>
+
+            <main>
+                <HeroSection/>
+                <FlashSales/>
+                <BrowserCategory/>
+                <BestSelling/>
+                <Banner />
+                <ExploreProducts/>
+                <NewArrival/>
+                <Benefit/>
+            </main>
+
+            <Footer/>
+        </>
+    )
 }

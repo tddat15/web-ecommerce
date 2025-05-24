@@ -9,6 +9,7 @@ interface ProductThumbnailProps {
   rating: number;
   reviewCount: number;
   showAddToCart?: boolean;
+  isNewProduct?: boolean;
 }
 
 const ProductThumbnail: React.FC<ProductThumbnailProps> =
@@ -20,13 +21,21 @@ const ProductThumbnail: React.FC<ProductThumbnailProps> =
      discount,
      rating,
      reviewCount,
+     isNewProduct = false,
      showAddToCart = false,
    }) => {
     return (
       <div className="product-thumbnail">
         <div className="image-wrapper">
           <div className="thumbnail-header">
-            <div className="top-left-badge">-{discount}%</div>
+              {discount > 0 && (
+                  <div className="top-left-badge discount">-{discount}%</div>
+
+              )}
+
+              {isNewProduct && (
+                    <div className="top-left-badge new-product">New</div>
+              )}
 
             <div className="top-right-icons">
               <button className="icon-button">❤️</button>

@@ -16,14 +16,23 @@
     position: absolute;
     top: 12px;
     left: 12px;
-    background-color: #DB4444;
-    color: #FAFAFA;
+
     border-radius: 4px;
     width: 55px;
     height: 26px;
     text-align: center;
     align-items: center;
 }
+ .discount {
+     background-color: #DB4444;
+     color: #FAFAFA;
+ }
+
+ .new-product {
+     background-color: #00FF66;
+     color: #FAFAFA;
+ }
+
 
 .image-wrapper .thumbnail-header .top-right-icons {
     position: absolute;

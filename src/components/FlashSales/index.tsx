@@ -6,7 +6,7 @@ import ProductThumbnail from "../ProductThumbnail";
 export default function FlashSales() {
   return (
     <>
-      <section className="flash-sales">
+      <section className="container flash-sales">
         <div className="header">
           <SectionHeader
             label='Todays'

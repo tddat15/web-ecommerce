@@ -1,12 +1,12 @@
 import './styles.css'
 import SectionHeader from "../SectionHeader";
-import {flashSaleData} from "../../mocks";
+import {exploreProductsData} from "../../mocks";
 import ProductThumbnail from "../ProductThumbnail";
 
 export default function ExploreProducts() {
   return (
     <>
-      <section className="flash-sales">
+      <section className="container exp">
         <div className="header">
           <SectionHeader
             label='Our Products'
@@ -14,9 +14,8 @@ export default function ExploreProducts() {
           />
         </div>
 
-        <div className="slider-products">
-          <div className="list-products">
-            {flashSaleData.map((sale) => (
+          <div className="explore-list-products">
+            {exploreProductsData.map((sale) => (
               <ProductThumbnail
                 imageUrl={sale.image}
                 name={sale.title}
@@ -26,19 +25,11 @@ export default function ExploreProducts() {
                 rating={sale.rating}
                 reviewCount={sale.reviews}
                 showAddToCart={false}
+                isNewProduct={sale.isNewProduct}
               />
             ))}
           </div>
-        </div>
 
-
-        <div className="products">
-
-        </div>
-
-        {/*<div className="view-all">*/}
-        {/*  <button>View All Products</button>*/}
-        {/*</div>*/}
       </section>
     </>
   )
