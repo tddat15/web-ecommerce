@@ -1,4 +1,5 @@
 import './styles.css';
+import {Link} from "react-router-dom";
 
 interface ProductThumbnailProps {
   id: number;
@@ -26,9 +27,9 @@ const ProductThumbnail: React.FC<ProductThumbnailProps> =
      isNewProduct = false,
      showAddToCart = false,
    }) => {
-    // @ts-ignore
     return (
-      <div className="product-thumbnail">
+      <div className="container product-thumbnail">
+
         <div className="image-wrapper">
           <div className="thumbnail-header">
             {discount > 0 && (
@@ -47,9 +48,19 @@ const ProductThumbnail: React.FC<ProductThumbnailProps> =
           </div>
 
           <div className="product-image">
-            <img src={imageUrl} alt={name}/>
+            <Link to={`/products/${id}`} target="_self">
+              <img src={imageUrl} alt={name}/>
+            </Link>
+            <div className="add-to-cart">
+              <button className="bnt-add-to-cart">
+                Add To Cart
+              </button>
+            </div>
           </div>
+
+
         </div>
+
 
         <div className="product-info">
           <h3 className="product-name">{name}</h3>
