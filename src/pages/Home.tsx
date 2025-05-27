@@ -10,22 +10,20 @@ import Benefit from "../components/Benefit";
 import Banner from "../components/Banner";
 
 export default function Home() {
-    return (
-        <>
-            <Header/>
-
-            <main>
-                <HeroSection/>
-                <FlashSales/>
-                <BrowserCategory/>
-                <BestSelling/>
-                <Banner />
-                <ExploreProducts/>
-                <NewArrival/>
-                <Benefit/>
-            </main>
-
-            <Footer/>
-        </>
-    )
+  return (
+    <>
+      <Header/>
+      <main>
+        <HeroSection/>
+        <FlashSales/>
+        <BrowserCategory/>
+        <BestSelling/>
+        <Banner/>
+        <ExploreProducts/>
+        <NewArrival/>
+        <Benefit/>
+      </main>
+      <Footer/>
+    </>
+  )
 }

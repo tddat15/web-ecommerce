@@ -18,6 +18,7 @@ export default function BestSelling() {
           <div className="list-products">
             {bestSellingMock.map((sale) => (
               <ProductThumbnail
+                id={sale.id}
                 imageUrl={sale.image}
                 name={sale.title}
                 currentPrice={sale.price}

@@ -23,15 +23,16 @@
     text-align: center;
     align-items: center;
 }
- .discount {
-     background-color: #DB4444;
-     color: #FAFAFA;
- }
 
- .new-product {
-     background-color: #00FF66;
-     color: #FAFAFA;
- }
+.discount {
+    background-color: #DB4444;
+    color: #FAFAFA;
+}
+
+.new-product {
+    background-color: #00FF66;
+    color: #FAFAFA;
+}
 
 
 .image-wrapper .thumbnail-header .top-right-icons {
@@ -45,4 +46,24 @@
 
 .product-info {
     padding-top: 16px;
+}
+
+.product-info .price {
+    display: flex;
+    gap: 12px;
+}
+
+.price .current {
+    color: #DB4444;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.price .original {
+    color: #c8c4c4;
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 }

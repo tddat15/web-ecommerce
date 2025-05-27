@@ -18,6 +18,7 @@ export default function FlashSales() {
           <div className="list-products">
             {flashSaleData.map((sale) => (
               <ProductThumbnail
+                id={sale.id}
                 imageUrl={sale.image}
                 name={sale.title}
                 currentPrice={sale.price}
