@@ -48,6 +48,9 @@
 
 
 .image-wrapper .thumbnail-header .top-right-icons {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
     position: absolute;
     top: 12px;
     right: 12px;
@@ -85,12 +88,16 @@
     bottom: 0;
     height: 41px;
     opacity: 0;
-    pointer-events: none;
     transition: opacity 0.3s ease;
     width: 100%;
 }
 
-.product-image:hover .add-to-cart {
+.image-wrapper:hover .add-to-cart {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-wrapper:hover .top-right-icons {
     opacity: 1;
     pointer-events: auto;
 }

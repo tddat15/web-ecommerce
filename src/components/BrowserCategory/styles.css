@@ -15,6 +15,7 @@
     border: 1px solid #0000004D;
     border-radius: 4px;
 }
+
 .category-item img {
     width: 56px;
     height: 56px;
@@ -24,4 +25,14 @@
     margin-top: 16px;
     font-size: 16px;
     font-weight: 400;
+}
+
+.category-item:hover {
+    color: #FAFAFA;
+    background-color: #DB4444;
+}
+
+.category-item:hover img {
+    color: #FAFAFA;
+    background-color: #DB4444;
 }

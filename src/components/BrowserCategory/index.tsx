@@ -14,15 +14,13 @@ export default function BrowserCategory() {
         </div>
 
         <div className="list-category">
-            {browserCategoryData.map((category) => (
-              <div className="category-item" key={category.id}>
-                <img src={category.image} alt={category.title}/>
-                <h3>{category.title}</h3>
-              </div>
-            ))}
+          {browserCategoryData.map((category, index) => (
+            <div className="category-item" key={index}>
+              <img src={category.image} alt={category.title}/>
+              <h3>{category.title}</h3>
+            </div>
+          ))}
         </div>
-
-
 
 
       </section>
