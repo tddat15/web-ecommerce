@@ -1,4 +1,5 @@
 import './styles.css';
+import {Path} from "../../common/constant";
 
 export default function Header() {
 
@@ -13,7 +14,7 @@ export default function Header() {
           <a href="/home">Home</a>
           <a href="/contacts">Contact</a>
           <a href="/about">About</a>
-          <a href="/sign-up">Sign Up</a>
+          <a href={`${Path.AUTH}/sign-up`}>Sign Up</a>
         </nav>
 
         <div className="search-wrapper">
@@ -21,7 +22,7 @@ export default function Header() {
             <input type="text" placeholder="What are you looking for?"/>
             <img src="/search-icon.svg" alt="search"/>
           </div>
-          
+
           <img src="/heart-icon.svg" alt="favorite"/>
           <img src="/cart-icon.svg" alt="cart"/>
         </div>
