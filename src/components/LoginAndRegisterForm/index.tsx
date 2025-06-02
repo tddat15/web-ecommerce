@@ -1,5 +1,6 @@
 import './styles.css';
 import { useState } from 'react';
+import { Button } from '../index';
 
 interface Props {
   isLoginForm: boolean;
@@ -43,6 +44,12 @@ const LoginAndRegisterForm: React.FC<Props> = ({
           <label>
             <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
           </label>
+          <Button
+            text="Create Account"
+            color="red"
+            fullWidth={true}
+            type="container"
+          />
         </div>)}
     </form>
   </div>);

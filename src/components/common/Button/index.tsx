@@ -1,17 +1,29 @@
-import React from "react";
-import './styles.css'
+import React from 'react';
+import './styles.css';
 
 interface ButtonProps {
-  content: string;
+  text: string;
+  color: 'red' | 'white' | 'blue';
+  type: 'container';
+  fullWidth: boolean;
 }
 
 
-const Button: React.FC<ButtonProps> = ({content}) => {
+const Button: React.FC<ButtonProps> = (
+  {
+    text,
+    color,
+    type,
+    fullWidth = false,
+  }) => {
   return (
-    <button>
-      {content}
-    </button>
-  )
-}
+    <div className="button-wrap">
+      <button>
+        {text}
+      </button>
+    </div>
+
+  );
+};
 
 export default Button;

@@ -12,7 +12,7 @@ const LoginAndRegister: React.FC<LoginAndRegisterProps> = (
     <div className="container login-register-wrap">
       <img src="/login-image.jpg" alt="login-img" />
       <LoginAndRegisterForm
-        isLoginForm
+        isLoginForm={isLoginForm}
       />
     </div>
   );
