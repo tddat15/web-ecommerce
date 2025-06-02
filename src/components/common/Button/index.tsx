@@ -3,9 +3,10 @@ import './styles.css';
 
 interface ButtonProps {
   text: string;
-  color: 'red' | 'white' | 'blue';
-  type: 'container';
-  fullWidth: boolean;
+  color: 'red' | 'white' | 'green';
+  type: 'container' | 'outline';
+  fullWidth?: boolean;
+  onClick?: () => void;
 }
 
 
@@ -15,10 +16,18 @@ const Button: React.FC<ButtonProps> = (
     color,
     type,
     fullWidth = false,
+    onClick,
   }) => {
+  const classNames = [
+    'custom-button',
+    `custom-button--${type}`,
+    `custom-button--${type}-${color}`,
+    fullWidth ? 'custom-button--full-width' : '',
+  ].join(' ');
+
   return (
     <div className="button-wrap">
-      <button>
+      <button className={classNames} onClick={onClick}>
         {text}
       </button>
     </div>

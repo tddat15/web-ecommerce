@@ -1,14 +1,16 @@
 import './styles.css';
 import { useState } from 'react';
 import { Button } from '../index';
+import Input from '../common/Input';
 
 interface Props {
   isLoginForm: boolean;
 }
 
-const LoginAndRegisterForm: React.FC<Props> = ({
-                                                 isLoginForm,
-                                               }) => {
+const LoginAndRegisterForm: React.FC<Props> = (
+  {
+    isLoginForm,
+  }) => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -26,24 +28,55 @@ const LoginAndRegisterForm: React.FC<Props> = ({
     <form onSubmit={handleSubmit}>
       {isLoginForm ? (
           <div className="form-input">
-            <label>
-              <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            </label>
-            <label>
-              <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-            </label>
+            <Input
+              type="text"
+              placeholder="Name"
+              isBorder={false}
+              backgroundColor="transparent"
+              isUnderline={false}
+              onChange={(value) => setEmail(value)}
+            />
+            <Input
+              type="text"
+              placeholder="Name"
+              isBorder={false}
+              backgroundColor="transparent"
+              isUnderline={false}
+              onChange={(value) => setPassword(value)}
+            />
+            <Button
+              text="Log I n"
+              color="red"
+              fullWidth={true}
+              type="container"
+            />
           </div>)
         :
         (<div className="form-input">
-          <label>
-            <input type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />
-          </label>
-          <label>
-            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-          </label>
-          <label>
-            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-          </label>
+          <Input
+            type="text"
+            placeholder="Name"
+            isBorder={false}
+            backgroundColor="transparent"
+            isUnderline={false}
+            onChange={(value) => setName(value)}
+          />
+          <Input
+            type="text"
+            placeholder="Name"
+            isBorder={false}
+            backgroundColor="transparent"
+            isUnderline={false}
+            onChange={(value) => setEmail(value)}
+          />
+          <Input
+            type="text"
+            placeholder="Name"
+            isBorder={false}
+            backgroundColor="transparent"
+            isUnderline={false}
+            onChange={(value) => setPassword(value)}
+          />
           <Button
             text="Create Account"
             color="red"
