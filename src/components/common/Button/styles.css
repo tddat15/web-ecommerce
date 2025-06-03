@@ -1,5 +1,6 @@
 .button-wrap {
     display: inline-block;
+    width: 100%;
 }
 
 .custom-button {

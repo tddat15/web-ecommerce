@@ -1,3 +1,27 @@
-.login-register-wrap {
+.login-register-form-wrap {
     display: flex;
+    flex-direction: column;
+    width: 317px;
+}
+
+.login-register-form-wrap .title-form {
+    font-family: Inter, serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+}
+
+.login-register-form-wrap .guiding-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }

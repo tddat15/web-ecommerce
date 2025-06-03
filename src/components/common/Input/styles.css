@@ -1,10 +1,36 @@
-.input-wrapper {
-    margin: 8px 0;
+.input-wrap {
+    margin: 0;
 }
 
 .custom-input {
     font-size: 16px;
     font-weight: 400;
-    border-radius: 4px;
+    padding: 2px 0;
+    line-height: 24px;
+    width: 100%;
     outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.custom-input--bg-transparent {
+    background-color: transparent;
+}
+
+.custom-input--bg-gray {
+    background-color: #f0f0f0;
+}
+
+.custom-input--bordered {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.custom-input--underlined {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+}
+
+.custom-input--underlined:focus {
+    border-bottom-color: #78787a;
 }

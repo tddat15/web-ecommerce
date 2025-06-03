@@ -1,5 +1,5 @@
 import './styles.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '../index';
 import Input from '../common/Input';
 
@@ -20,10 +20,14 @@ const LoginAndRegisterForm: React.FC<Props> = (
     console.log(name, email, password);
   };
 
-  return (<div className="container login-register-wrap">
-    {isLoginForm ? (<p className="tile-form">Log in to Exclusive</p>) :
-      <p className="tile-form">Create an account</p>}
-    <p>Enter your details below</p>
+  return (<div className="container login-register-form-wrap">
+    {isLoginForm
+      ? (<p className="title-form">Log in to Exclusive</p>)
+      : (<p className="title-form">Create an account</p>)}
+
+    <div className="guiding-text">
+      <p>Enter your details below</p>
+    </div>
 
     <form onSubmit={handleSubmit}>
       {isLoginForm ? (
@@ -38,7 +42,7 @@ const LoginAndRegisterForm: React.FC<Props> = (
             />
             <Input
               type="text"
-              placeholder="Name"
+              placeholder="Email"
               isBorder={false}
               backgroundColor="transparent"
               isUnderline={false}
@@ -58,23 +62,23 @@ const LoginAndRegisterForm: React.FC<Props> = (
             placeholder="Name"
             isBorder={false}
             backgroundColor="transparent"
-            isUnderline={false}
+            isUnderline={true}
             onChange={(value) => setName(value)}
           />
           <Input
             type="text"
-            placeholder="Name"
+            placeholder="Email"
             isBorder={false}
             backgroundColor="transparent"
-            isUnderline={false}
+            isUnderline={true}
             onChange={(value) => setEmail(value)}
           />
           <Input
-            type="text"
-            placeholder="Name"
+            type="password"
+            placeholder="Password"
             isBorder={false}
             backgroundColor="transparent"
-            isUnderline={false}
+            isUnderline={true}
             onChange={(value) => setPassword(value)}
           />
           <Button

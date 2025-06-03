@@ -1,4 +1,5 @@
 import './styles.css';
+import React from 'react';
 
 interface Props {
   type: 'text' | 'email' | 'password';
@@ -9,12 +10,20 @@ interface Props {
   onChange: (text: string) => void;
 }
 
-const Input: React.FC<Props> = ({ type, placeholder, isBorder, backgroundColor, isUnderline, onChange }) => {
+const Input: React.FC<Props> = (
+  {
+    type,
+    placeholder,
+    backgroundColor = 'transparent',
+    isBorder = false,
+    isUnderline = false,
+    onChange,
+  }) => {
   const classNames = [
     'custom-input',
-    `bg-${backgroundColor}`,
-    isBorder ? 'bordered' : '',
-    isUnderline ? 'underlined' : '',
+    `custom-input--bg-${backgroundColor}`,
+    isBorder ? 'custom-input--bordered' : '',
+    isUnderline ? 'custom-input--underlined' : '',
   ].join(' ');
 
   return (

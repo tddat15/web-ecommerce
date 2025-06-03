@@ -1,4 +1,5 @@
 import { LoginAndRegisterForm } from '../../components';
+import React from 'react';
 
 interface LoginAndRegisterProps {
   isLoginForm: boolean;
@@ -10,10 +11,15 @@ const LoginAndRegister: React.FC<LoginAndRegisterProps> = (
   }) => {
   return (
     <div className="container login-register-wrap">
-      <img src="/login-image.jpg" alt="login-img" />
-      <LoginAndRegisterForm
-        isLoginForm={isLoginForm}
-      />
+      <div className="image-background">
+        <img src="/login-image.jpg" alt="login-img" />
+      </div>
+
+      <div className="login-register-form">
+        <LoginAndRegisterForm
+          isLoginForm={isLoginForm}
+        />
+      </div>
     </div>
   );
 };
