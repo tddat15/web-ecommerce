@@ -7,9 +7,9 @@ import {
   FlashSales,
   Header,
   HeroSection,
-  NewArrival
-} from "../components";
-import Footer from "../components/Footer";
+  NewArrival,
+} from '../components';
+import Footer from '../components/Footer';
 
 
 export default function Home() {
@@ -17,14 +17,16 @@ export default function Home() {
     <>
       <Header/>
       <main>
-        <HeroSection/>
-        <FlashSales/>
-        <BrowserCategory/>
-        <BestSelling/>
-        <Banner/>
-        <ExploreProducts/>
-        <NewArrival/>
-        <Benefit/>
+        <div style={{display: 'flex', flexDirection: 'column' , gap: '140px'}}>
+          <HeroSection/>
+          <FlashSales/>
+          <BrowserCategory/>
+          <BestSelling/>
+          <Banner/>
+          <ExploreProducts/>
+          <NewArrival/>
+          <Benefit/>
+        </div>
       </main>
       <Footer/>
     </>

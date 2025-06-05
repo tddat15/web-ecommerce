@@ -19,10 +19,10 @@ const Button: React.FC<ButtonProps> = (
     onClick,
   }) => {
   const classNames = [
-    'custom-button',
-    `custom-button--${type}`,
-    `custom-button--${type}-${color}`,
-    fullWidth ? 'custom-button--full-width' : '',
+    'button',
+    `${type}`,
+    `${type}-${color}`,
+    fullWidth ? 'full-width' : '',
   ].join(' ');
 
   return (

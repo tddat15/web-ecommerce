@@ -2,7 +2,7 @@
     margin: 0;
 }
 
-.custom-input {
+.input {
     font-size: 16px;
     font-weight: 400;
     padding: 2px 0;
@@ -12,25 +12,25 @@
     transition: border-color 0.2s ease;
 }
 
-.custom-input--bg-transparent {
+.bg-transparent {
     background-color: transparent;
 }
 
-.custom-input--bg-gray {
+.bg-gray {
     background-color: #f0f0f0;
 }
 
-.custom-input--bordered {
+.bordered {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.custom-input--underlined {
+.underlined {
     border: none;
     border-bottom: 2px solid #ccc;
     border-radius: 0;
 }
 
-.custom-input--underlined:focus {
+.underlined:focus {
     border-bottom-color: #78787a;
 }

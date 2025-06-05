@@ -20,10 +20,10 @@ const Input: React.FC<Props> = (
     onChange,
   }) => {
   const classNames = [
-    'custom-input',
-    `custom-input--bg-${backgroundColor}`,
-    isBorder ? 'custom-input--bordered' : '',
-    isUnderline ? 'custom-input--underlined' : '',
+    'input',
+    `bg-${backgroundColor}`,
+    isBorder ? 'bordered' : '',
+    isUnderline ? 'underlined' : '',
   ].join(' ');
 
   return (

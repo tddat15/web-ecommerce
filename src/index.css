@@ -13,6 +13,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 code {
@@ -23,7 +24,7 @@ code {
 main {
     display: flex;
     flex-direction: column;
-    gap: 140px;
+    /*gap: 140px;*/
     margin-bottom: 140px;
     overflow: hidden;
 }
