@@ -1,5 +1,6 @@
 import { LoginAndRegisterForm } from '../../components';
 import React from 'react';
+import './styles.css';
 
 interface LoginAndRegisterProps {
   isLoginForm: boolean;

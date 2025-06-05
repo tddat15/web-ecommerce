@@ -1,7 +1,7 @@
 .login-register-form-wrap {
     display: flex;
     flex-direction: column;
-    width: 317px;
+    width: 350px;
 }
 
 .login-register-form-wrap .title-form {
@@ -24,4 +24,29 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+.login-button-and-forgot-pass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password {
+    display: inline-block;
+    width: 150px;
+    color: #DB4444;
+    text-decoration: none;
+}
+
+.form-input .redirect-to-login {
+    text-align: center;
+}
+
+.form-input .login-text {
+    margin-left: 5px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 16px;
+    color: #7a7979;
 }

@@ -2,6 +2,8 @@ import './styles.css';
 import React, { useState } from 'react';
 import { Button } from '../index';
 import Input from '../common/Input';
+import { Link } from 'react-router-dom';
+import { Path } from '../../common/constant';
 
 interface Props {
   isLoginForm: boolean;
@@ -37,7 +39,7 @@ const LoginAndRegisterForm: React.FC<Props> = (
               placeholder="Name"
               isBorder={false}
               backgroundColor="transparent"
-              isUnderline={false}
+              isUnderline={true}
               onChange={(value) => setEmail(value)}
             />
             <Input
@@ -45,15 +47,22 @@ const LoginAndRegisterForm: React.FC<Props> = (
               placeholder="Email"
               isBorder={false}
               backgroundColor="transparent"
-              isUnderline={false}
+              isUnderline={true}
               onChange={(value) => setPassword(value)}
             />
-            <Button
-              text="Log I n"
-              color="red"
-              fullWidth={true}
-              type="container"
-            />
+
+            <div className="login-button-and-forgot-pass">
+              <Button
+                text="Log In"
+                color="red"
+                fullWidth={false}
+                type="container"
+              />
+              <Link className="forgot-password" to={`/${Path.AUTH}/forgot-password`}>
+                  Forgot Password?
+              </Link>
+            </div>
+
           </div>)
         :
         (<div className="form-input">
@@ -87,6 +96,16 @@ const LoginAndRegisterForm: React.FC<Props> = (
             fullWidth={true}
             type="container"
           />
+
+          <p className="redirect-to-login">Already have account?
+            <Link to={`/${Path.AUTH}/sign-in`} >
+              <span className="login-text">
+                <strong>
+                  Log in
+                </strong>
+              </span>
+            </Link>
+          </p>
         </div>)}
     </form>
   </div>);

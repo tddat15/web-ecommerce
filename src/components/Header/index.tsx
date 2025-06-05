@@ -1,5 +1,6 @@
 import './styles.css';
-import {Path} from "../../common/constant";
+import { Path } from '../../common/constant';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 
@@ -11,10 +12,10 @@ export default function Header() {
         </div>
 
         <nav className="navigation">
-          <a href="/home">Home</a>
-          <a href="/contacts">Contact</a>
-          <a href="/about">About</a>
-          <a href={`${Path.AUTH}/sign-up`}>Sign Up</a>
+          <Link to={`/${Path.HOME}`}>Home</Link>
+          <Link to={`/${Path.HOME}`}>Contacts</Link>
+          <Link to={`/${Path.HOME}`}>About</Link>
+          <Link to={`/${Path.AUTH}/sign-up`}>Sign Up</Link>
         </nav>
 
         <div className="search-wrapper">
