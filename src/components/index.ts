@@ -12,4 +12,5 @@ export { default as NotFound } from './NotFound';
 export { default as ProductThumbnail } from './ProductThumbnail';
 export { default as SectionHeader } from './SectionHeader';
 export { default as LoginAndRegisterForm } from './LoginAndRegisterForm';
+export { default as Slider } from './Slider';
 export * from './common';
