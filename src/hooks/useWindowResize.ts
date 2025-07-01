@@ -6,8 +6,7 @@ interface Props {
     height: number;
   };
 }
-
-export const useWindowResize = ({ callback }: Props) => {
+ const useWindowResize = ({ callback }: Props) => {
   useEffect(() => {
     function handleResize() {
       try{
@@ -24,3 +23,5 @@ export const useWindowResize = ({ callback }: Props) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 };
+
+export default useWindowResize;

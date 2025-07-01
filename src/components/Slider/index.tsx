@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import mathClamp from 'math-clamp';
 import './styled.css';
-import { useInterval, useWindowResize } from '../../hooks';
+import useInterval from '../../hooks/useInterval';
+import useWindowResize from '../../hooks/useWindowResize';
 
 interface Breakpoint {
   breakpoint: number;
@@ -102,33 +103,37 @@ export default function Slider({children, settings, breakpoints, handler}: Props
     }
   };
 
-  useWindowResize(
-  () => {
+  useWindowResize({
+    callback: () => {
       setPreferences(refreshPreferences());
       setInteracted(false);
       change(0, true);
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
     }
-  );
+  });
 
-  useInterval(() => {
-    if (!preferences.autoplay) {
-      return;
-    }
+  useInterval({
+    callback: () => {
+      if (!preferences.autoplay) return;
+      if (interacted) return;
 
-    if (interacted) {
-      return;
-    }
+      if (!backward && isLast()) {
+        return setBackward(true);
+      }
 
-    if (!backward && isLast()) {
-      return setBackward(true);
-    }
+      if (backward && isFirst()) {
+        return setBackward(false);
+      }
 
-    if (backward && isFirst()) {
-      return setBackward(false);
-    }
-
-    change(getLooped());
-  }, preferences?.interval ?? 1000);
+      change(getLooped());
+    },
+    delay: preferences?.interval ?? 1000,
+    stopOperator: false,
+    dependencies: [preferences, interacted, backward, activeSlide],
+  });
 
   return (
     <div className="styled-slider" {...{
